@@ -1,0 +1,19 @@
+<?php
+    function burger_burgler_preprocess_node(&$variables){
+        
+        //$variables['content']['field_image']['#suffix'] = "suffix to a nice image";
+        //$variables['custom_variable'] = "Monkeys like bananas :)";
+
+        //render api
+        $variables['content']['our_custom_filed'] = array('#type' => 'markup', '#markup' => '<h3>Hello from our render array</h3>');
+
+        $burger_list = array(
+            array('name' => 'Cheese burger'),
+            array('name' => 'Halumni burger'),
+            array('name' => 'Quinoa burger'),
+            );
+        $variables['burgers'] = $burger_list;
+        //kint($variables);
+       
+    }
+?>
